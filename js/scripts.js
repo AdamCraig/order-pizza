@@ -45,7 +45,6 @@ Pizza.prototype.calculateOrderCost = function(toppings) {
   } else {
     orderCost *= 1;
   }
-
   return orderCost;
 }
 
@@ -68,12 +67,11 @@ $(document).ready(function() {
     var inputtedToppingName = $(".toppingsCheck:checked").val();
     var inputtedPizzaSize = parseInt( $("select.new-size").val() );
     var inputtedPizzaSizeName = $(".new-size :selected").text();
-
     var inputtedQuantity = parseInt( $("select.new-quantity").val() );
 
     var pizza = new Pizza(inputtedToppings, inputtedPizzaSize, inputtedQuantity, inputtedToppingName);
 
-    $("#order-total").text(pizza.calculateOrderCost(inputtedToppings) + " Schmeckles!");
+    $("#order-total").text(pizza.calculateOrderCost(inputtedToppings) + " Schmeckles");
     $("#show-order h5").text(inputtedPizzaSizeName);
 
     pizza.showOrder(inputtedToppings, inputtedToppingName);
