@@ -17,28 +17,57 @@
       <div class="row">
         <div class="col-md-6" id="box1">
           <form id="new-order">
-          <!-- First dropdown (Toppings) -->
-          <h3>Select Your Toppings:</h3>
-          <select class="form-control new-topping">
-            <option id="topping1" value="1">Pepperoni (Boring) (+$1)</option>
-            <option id="topping2" value="2">Anchovies (Ew) (+$1)</option>
-            <option id="topping3" value="3">Unicorn Steak (Now We're Talking) (+$2)</option>
-            <option id="topping4" value="4">Alien Crab Meat (+$2)</option>
-            <option id="topping5" value="5">Substance X (+$3)</option>
-          </select>
-          <!-- Second dropdown (Time) -->
+
+          <!-- First dropdown (Size) -->
           <h3>Select Your Pizza Size:</h3>
-          <select class="form-control new-size">
-            <option id="size1" value="1">Teeny Tiny Pie (Little Bites) (+$1)</option>
-            <option id="size2" value="2">Pretty Small Paul (+$2)</option>
-            <option id="size3" value="3">Mid-Size Sid (+$3)</option>
-            <option id="size4" value="4">Large Marge (+$4)</option>
-            <option id="size5" value="5">Gigantic Something That Rhymes With Gigantic (+$5)</option>
+          <select multiple class="form-control new-size">
+            <option id="size1" value="1" selected>Teeny Tiny Pie (Little Bites) ($1)</option>
+            <option id="size2" value="2">Pretty Small Paul ($2)</option>
+            <option id="size3" value="3">Mid-Size Sid ($3)</option>
+            <option id="size4" value="4">Large Marge ($4)</option>
+            <option id="size5" value="5">Gigantic Something That Rhymes With Gigantic ($5)</option>
           </select>
-          <!-- Third dropdown (Age) -->
+          <hr>
+
+          <!-- First Set of Checkboxes (Toppings) -->
+          <h3>Select Your Toppings (Each Topping +$2):</h3>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" class="toppingsCheck" id="chkBox1" value="Pepperoni" checked>Pepperoni (Boring)
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" class="toppingsCheck" id="chkBox2" value="Anchovies">Anchovies (Ew)
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" class="toppingsCheck" id="chkBox3" value="UnicornSteak">Unicorn Steak (Now We're Talking)
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" class="toppingsCheck" id="chkBox4" value="CrabMeat">Alien Crab Meat
+            </label>
+          </div>
+
+          <div class="checkbox">
+            <label>
+              <input type="checkbox" class="toppingsCheck" id="chkBox5" value="SubstanceX">Substance X
+            </label>
+          </div>
+
+          <hr>
+
+          <!-- Second dropdown (Quantity) -->
           <h3>Quantity</h3>
-          <select class="form-control new-quantity">
-            <option id="quantity1" value="1">1 (feed yourself)</option>
+          <select multiple class="form-control new-quantity">
+            <option id="quantity1" value="1" selected>1 (feed yourself)</option>
             <option id="quantity2" value="2">3 (feed your family)</option>
             <option id="quantity3" value="3">300 (feed your colony)</option>
             <option id="quantity4" value="4">300,000 (feed your nearest star cluster/galaxy)</option>
@@ -60,13 +89,14 @@
       </div>
 
       <!--START SECOND ROW-->
+      
       <div class="row">
         <div class="col-md-6" id="box3">
 
           <h3>Your Orders:</h3>
 
         </div>
-        <!-- First column ends -->
+
         <div class="col-md-4" id="box4">
           <div id="show-ticket">
             <h2>Delivery</h2>

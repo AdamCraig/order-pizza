@@ -4,17 +4,10 @@ function Pizza (toppings, pizzaSize, quantity) {
   this.quantity = quantity;
 }
 
-Pizza.prototype.calculateOrderCost = function() {
+Pizza.prototype.calculateOrderCost = function(toppings) {
   var orderCost = 0;
 
-  if (this.toppings === 1 || this.toppings === 2) {
-    orderCost += 1;
-  } else if (this.toppings === 3 || this.toppings === 4) {
-    orderCost += 2;
-  } else {
-    orderCost += 3;
-  }
-
+  // checks size and adds charge accordingly
   if (this.pizzaSize === 1) {
     orderCost += 1;
   } else if (this.pizzaSize === 2) {
@@ -23,18 +16,32 @@ Pizza.prototype.calculateOrderCost = function() {
     orderCost += 3;
   } else if (this.pizzaSize === 4) {
     orderCost += 4;
-  } else {
+  } else if (this.pizzaSize === 5){
     orderCost += 5;
+  } else {
+    orderCost += 0;
   }
 
+  // iterates through checkboxes and adds 2 for each topping checked
+  for (i = 1; i <= toppings; i++) {
+    if ($("#chkBox" + i).is(":checked")) {
+      orderCost += 2;
+    } else {
+      orderCost += 0;
+    }
+  }
+
+  // checks quantity and multiplies price accordingly
   if (this.quantity === 1) {
     orderCost *= 1;
   } else if (this.quantity === 2) {
     orderCost *= 3;
   } else if (this.quantity === 3) {
     orderCost *= 300;
-  } else {
+  } else if (this.quantity === 4){
     orderCost *= 300000;
+  } else {
+    orderCost *= 1;
   }
 
   return orderCost;
@@ -45,13 +52,13 @@ $(document).ready(function() {
 
     event.preventDefault();
 
-    var inputtedToppings = parseInt( $("select.new-topping").val() );
+    var inputtedToppings = $(".toppingsCheck").length;
     var inputtedPizzaSize = parseInt( $("select.new-size").val() );
     var inputtedQuantity = parseInt( $("select.new-quantity").val() );
 
     var pizza = new Pizza(inputtedToppings, inputtedPizzaSize, inputtedQuantity);
 
-    $("#order-total").text(pizza.calculateOrderCost() + " Glorps");
+    $("#order-total").text(pizza.calculateOrderCost(inputtedToppings) + " Glorps");
 
   });
 });
