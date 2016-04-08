@@ -19,18 +19,18 @@
           <form id="new-order">
 
           <!-- First dropdown (Size) -->
-          <h3>Select Your Pizza Size: </h3>
+          <h3 class="header">Select Your Pizza Size: </h3>
           <select multiple class="form-control new-size">
-            <option id="size1" value="1" selected>Teeny Tiny Pie (Little Bites) (1&#9797;)</option>
+            <option id="size1" value="1" selected>Little Bites (1&#9797;)</option>
             <option id="size2" value="2">Pretty Small Paul (2&#9797;)</option>
             <option id="size3" value="3">Mid-Size Sid (3&#9797;)</option>
             <option id="size4" value="4">Large Marge (4&#9797;)</option>
-            <option id="size5" value="5">Gigantic Something That Rhymes With Gigantic (5&#9797;)</option>
+            <option id="size5" value="5">The Big Rig (5&#9797;)</option>
           </select>
           <hr>
 
           <!-- First Set of Checkboxes (Toppings) -->
-          <h3>Select Your Toppings (Each Topping +2&#9797;):</h3>
+          <h3 class="header">Select Your Toppings (Each Topping +2&#9797;):</h3>
 
           <div class="checkbox">
             <label>
@@ -40,13 +40,13 @@
 
           <div class="checkbox">
             <label>
-              <input type="checkbox" class="toppingsCheck" id="chkBox2" value="Anchovies">Anchovies (Ew)
+              <input type="checkbox" class="toppingsCheck" id="chkBox2" value="Deadly Scorpion Liver">Deadly Scorpion Liver
             </label>
           </div>
 
           <div class="checkbox">
             <label>
-              <input type="checkbox" class="toppingsCheck" id="chkBox3" value="Unicorn Steak">Unicorn Steak (Now We're Talking)
+              <input type="checkbox" class="toppingsCheck" id="chkBox3" value="Tentacle Steak">Tentacle Steak
             </label>
           </div>
 
@@ -65,24 +65,26 @@
           <hr>
 
           <!-- Second dropdown (Quantity) -->
-          <h3>Quantity</h3>
+          <h3 class="header">Quantity</h3>
           <select multiple class="form-control new-quantity">
             <option id="quantity1" value="1" selected>1 (feed yourself)</option>
             <option id="quantity2" value="2">3 (feed your family)</option>
             <option id="quantity3" value="3">300 (feed your colony)</option>
             <option id="quantity4" value="4">300,000 (feed your nearest star cluster/galaxy)</option>
           </select>
-          <button type="submit" class="btn btn-info">Pizzify Me</button>
+
+          <button type="submit" class="btn center-block">Pizzify Me</button>
+
           </form>
         </div>
 
         <div class="col-md-5" id="box2">
           <div id="show-order">
-            <h2>Your Order:</h2>
-            <h3></h3>
-            <h4></h4>
-            <h1 id="order-total"></h1>
+            <h2>&#9797; Your Order: &#9797;</h2>
             <h5></h5>
+            <h4><h4>
+            <h3></h3>
+            <h1 id="order-total"></h1>
           </div>
         </div>
 

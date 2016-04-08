@@ -49,13 +49,13 @@ Pizza.prototype.calculateOrderCost = function(toppings) {
   return orderCost;
 }
 
-Pizza.prototype.showOrder = function(toppings, toppingName) {
-  $("#show-order h5").empty();
+Pizza.prototype.showOrder = function(toppings, toppingName, sizeName) {
+  $("#show-order h3").empty();
 
-  for (i = 1; i <= toppings; i++) {
+    for (i = 1; i <= toppings; i++) {
     if ($("#chkBox" + i).is(":checked")) {
       toppingName = $("#chkBox" + i).val();
-      $("#show-order h5").append(" + " + toppingName);
+      $("#show-order h3").append(" + " + toppingName);
     }
   }
 }
@@ -64,15 +64,17 @@ $(document).ready(function() {
   $("form#new-order").submit(function(event) {
 
     event.preventDefault();
-
     var inputtedToppings = $(".toppingsCheck").length;
     var inputtedToppingName = $(".toppingsCheck:checked").val();
     var inputtedPizzaSize = parseInt( $("select.new-size").val() );
+    var inputtedPizzaSizeName = $(".new-size :selected").text();
+
     var inputtedQuantity = parseInt( $("select.new-quantity").val() );
 
     var pizza = new Pizza(inputtedToppings, inputtedPizzaSize, inputtedQuantity, inputtedToppingName);
 
-    $("#order-total").text(pizza.calculateOrderCost(inputtedToppings) + " Schmeckles");
+    $("#order-total").text(pizza.calculateOrderCost(inputtedToppings) + " Schmeckles!");
+    $("#show-order h5").text(inputtedPizzaSizeName);
 
     pizza.showOrder(inputtedToppings, inputtedToppingName);
 
