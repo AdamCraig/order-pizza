@@ -47,6 +47,25 @@ Pizza.prototype.calculateOrderCost = function(toppings) {
   return orderCost;
 }
 
+Pizza.prototype.showOrder = function() {
+  $("#show-order h5").empty();
+  if (this.toppings === 1) {
+    $("#show-order h5").append(" * Placeholder * ");
+  }
+  if (this.toppings === 2) {
+    $("#show-order h5").append(" * Placeholder * ");
+  }
+  if (this.toppings === 3) {
+    $("#show-order h5").append(" * Placeholder * ");
+  }
+  if (this.toppings === 4) {
+  $("#show-order h5").append(" * Placeholder * ");
+  }
+  if (this.toppings === 5) {
+  $("#show-order h5").append(" * Placeholder * ");
+  }
+} // Start here
+
 $(document).ready(function() {
   $("form#new-order").submit(function(event) {
 
@@ -60,5 +79,6 @@ $(document).ready(function() {
 
     $("#order-total").text(pizza.calculateOrderCost(inputtedToppings) + " Glorps");
 
+    pizza.showOrder();
   });
 });
