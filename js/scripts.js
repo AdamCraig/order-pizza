@@ -1,8 +1,10 @@
-function Pizza (toppings, pizzaSize, quantity) {
+function Pizza (toppings, pizzaSize, quantity, toppingName) {
   this.toppings = toppings;
   this.pizzaSize = pizzaSize;
   this.quantity = quantity;
+  this.toppingName = toppingName;
 }
+
 
 Pizza.prototype.calculateOrderCost = function(toppings) {
   var orderCost = 0;
@@ -47,24 +49,16 @@ Pizza.prototype.calculateOrderCost = function(toppings) {
   return orderCost;
 }
 
-Pizza.prototype.showOrder = function() {
+Pizza.prototype.showOrder = function(toppings, toppingName) {
   $("#show-order h5").empty();
-  if (this.toppings === 1) {
-    $("#show-order h5").append(" * Placeholder * ");
+
+  for (i = 1; i <= toppings; i++) {
+    if ($("#chkBox" + i).is(":checked")) {
+      toppingName = $("#chkBox" + i).val();
+      $("#show-order h5").append(" + " + toppingName);
+    }
   }
-  if (this.toppings === 2) {
-    $("#show-order h5").append(" * Placeholder * ");
-  }
-  if (this.toppings === 3) {
-    $("#show-order h5").append(" * Placeholder * ");
-  }
-  if (this.toppings === 4) {
-  $("#show-order h5").append(" * Placeholder * ");
-  }
-  if (this.toppings === 5) {
-  $("#show-order h5").append(" * Placeholder * ");
-  }
-} // Start here
+}
 
 $(document).ready(function() {
   $("form#new-order").submit(function(event) {
@@ -72,13 +66,16 @@ $(document).ready(function() {
     event.preventDefault();
 
     var inputtedToppings = $(".toppingsCheck").length;
+    var inputtedToppingName = $(".toppingsCheck:checked").val();
     var inputtedPizzaSize = parseInt( $("select.new-size").val() );
     var inputtedQuantity = parseInt( $("select.new-quantity").val() );
 
-    var pizza = new Pizza(inputtedToppings, inputtedPizzaSize, inputtedQuantity);
+    var pizza = new Pizza(inputtedToppings, inputtedPizzaSize, inputtedQuantity, inputtedToppingName);
 
-    $("#order-total").text(pizza.calculateOrderCost(inputtedToppings) + " Glorps");
+    $("#order-total").text(pizza.calculateOrderCost(inputtedToppings) + " Schmeckles");
 
-    pizza.showOrder();
+    pizza.showOrder(inputtedToppings, inputtedToppingName);
+
+    $("#box2").fadeIn().delay(10).fadeOut().delay(10).fadeIn().delay(10).fadeOut().delay(10).fadeIn().delay(10).fadeOut().delay(10).fadeIn();
   });
 });

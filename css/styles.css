@@ -1,3 +1,12 @@
+body {
+  display: block;
+  background-image: url("../img/space.jpg");
+  background-repeat: no-repeat;
+  background-color: black;
+  background-size: 100% 100%;
+  font-family: 'Orbitron', sans-serif;
+}
+
 .header {
   text-align: center;
   font-weight: bolder;
@@ -8,11 +17,25 @@
   margin-bottom: 4px;
   background-color: green;
   margin: 2px;
+  border-radius: 1px;
+}
+
+#box3 {
+  display: none;
 }
 
 #box2, #box4 {
-  border: solid black 3px;
+  width: 45%;
+  height: 200px;;
+  background-image: url("../img/mpb-pizza.gif");
+  display: none;
+  border: dotted black 3px;
   margin-bottom: 4px;
-  background-color: gray;
+  background-color: white;
   margin: 2px;
+}
+
+#order-total {
+  font-weight: bold;
+  color: lightgreen;
 }

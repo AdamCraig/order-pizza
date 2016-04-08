@@ -3,15 +3,15 @@
   <head>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Orbitron|Monofett' rel='stylesheet' type='text/css'>
     <script src="js/jquery-1.12.0.js"></script>
     <script src="js/scripts.js"></script>
     <title>Gazorpazorp Pizza Company, Inc.</title>
   </head>
   <body>
     <div class="container">
-      <h1 class="header">Gazorpazorp Pizza Company, Inc.</h1>
+      <h1 class="header">&#9797; Gazorpazorp Pizza Company, Inc. &#9797;</h1>
       <h5 class="header">(Intergalactic Federation Sustenance Manufacture And Delivery Permit #67299)</h1>
-      <p class="header"><img src="img/mpb-pizza" alt="That MPB And His Pizza!"></p>
 
       <!--START FIRST ROW-->
       <div class="row">
@@ -19,18 +19,18 @@
           <form id="new-order">
 
           <!-- First dropdown (Size) -->
-          <h3>Select Your Pizza Size:</h3>
+          <h3>Select Your Pizza Size: </h3>
           <select multiple class="form-control new-size">
-            <option id="size1" value="1" selected>Teeny Tiny Pie (Little Bites) ($1)</option>
-            <option id="size2" value="2">Pretty Small Paul ($2)</option>
-            <option id="size3" value="3">Mid-Size Sid ($3)</option>
-            <option id="size4" value="4">Large Marge ($4)</option>
-            <option id="size5" value="5">Gigantic Something That Rhymes With Gigantic ($5)</option>
+            <option id="size1" value="1" selected>Teeny Tiny Pie (Little Bites) (1&#9797;)</option>
+            <option id="size2" value="2">Pretty Small Paul (2&#9797;)</option>
+            <option id="size3" value="3">Mid-Size Sid (3&#9797;)</option>
+            <option id="size4" value="4">Large Marge (4&#9797;)</option>
+            <option id="size5" value="5">Gigantic Something That Rhymes With Gigantic (5&#9797;)</option>
           </select>
           <hr>
 
           <!-- First Set of Checkboxes (Toppings) -->
-          <h3>Select Your Toppings (Each Topping +$2):</h3>
+          <h3>Select Your Toppings (Each Topping +2&#9797;):</h3>
 
           <div class="checkbox">
             <label>
@@ -46,19 +46,19 @@
 
           <div class="checkbox">
             <label>
-              <input type="checkbox" class="toppingsCheck" id="chkBox3" value="UnicornSteak">Unicorn Steak (Now We're Talking)
+              <input type="checkbox" class="toppingsCheck" id="chkBox3" value="Unicorn Steak">Unicorn Steak (Now We're Talking)
             </label>
           </div>
 
           <div class="checkbox">
             <label>
-              <input type="checkbox" class="toppingsCheck" id="chkBox4" value="CrabMeat">Alien Crab Meat
+              <input type="checkbox" class="toppingsCheck" id="chkBox4" value="Alien Crab Meat">Alien Crab Meat
             </label>
           </div>
 
           <div class="checkbox">
             <label>
-              <input type="checkbox" class="toppingsCheck" id="chkBox5" value="SubstanceX">Substance X
+              <input type="checkbox" class="toppingsCheck" id="chkBox5" value="Substance X">Substance X
             </label>
           </div>
 
@@ -76,8 +76,8 @@
           </form>
         </div>
 
-        <div class="col-md-4" id="box2">
-          <div id="show-ticket">
+        <div class="col-md-5" id="box2">
+          <div id="show-order">
             <h2>Your Order:</h2>
             <h3></h3>
             <h4></h4>
@@ -87,26 +87,5 @@
         </div>
 
       </div>
-
-      <!--START SECOND ROW-->
-
-      <div class="row">
-        <div class="col-md-6" id="box3">
-
-          <h3>Your Orders:</h3>
-
-        </div>
-
-        <div class="col-md-4" id="box4">
-          <div id="show-order">
-            <h2>Delivery</h2>
-            <h3></h3>
-            <h4></h4>
-            <h1 id="order-total"></h1>
-            <h5></h5>
-          </div>
-        </div>
-
-    </div>
   </body>
 </html>
