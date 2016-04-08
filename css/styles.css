@@ -1,0 +1,9 @@
+.header {
+  text-align: center;
+  font-weight: bolder;
+}
+
+#box1, #box2, #box3, #box4 {
+  border: solid black 10px;
+  border-radius: 4px;
+}

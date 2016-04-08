@@ -9,21 +9,67 @@
   </head>
   <body>
     <div class="container">
-      <h1>Order Your Dream Pizza!</h1>
-      <p>$2 off</p>
-      <p>$1 off</p>
-      <p>$2 extra</p>
+      <h1 class="header">Order Your Dream Pizza!</h1>
+      <p class="header"><img src="img/mpb-pizza" alt="That MPB And His Pizza!"></p>
+
+      <!--START FIRST ROW-->
       <div class="row">
-        <div class="col-md-8">
+        <div class="col-md-6" id="box1">
           <form id="new-order">
           <!-- First dropdown (Toppings) -->
           <h3>Select Your Toppings:</h3>
           <select class="form-control new-topping">
-            <option id="topping1" value="11">Placeholder</option>
-            <option id="topping2" value="11">Placeholder</option>
-            <option id="topping3" value="13">Placeholder</option>
-            <option id="topping4" value="11">Placeholder</option>
-            <option id="topping5" value="11">Placeholder</option>
+            <option id="topping1" value="1">Pepperoni (Boring) (+$1)</option>
+            <option id="topping2" value="2">Anchovies (Ew) (+$1)</option>
+            <option id="topping3" value="3">Unicorn Steak (Now We're Talking) (+$2)</option>
+            <option id="topping4" value="4">Alien Crab Meat (+$2)</option>
+            <option id="topping5" value="5">Substance X (+$3)</option>
+          </select>
+          <!-- Second dropdown (Time) -->
+          <h3>Select Your Pizza Size:</h3>
+          <select class="form-control new-size">
+            <option id="size1" value="-2">Teeny Tiny Pie (Little Bites)</option>
+            <option id="size2" value="-2">Pretty Small Paul</option>
+            <option id="size3" value="0">Mid-Size Sid</option>
+            <option id="size4" value="0">Large Marge</option>
+            <option id="size5" value="0">Super Junior</option>
+          </select>
+          <!-- Third dropdown (Age) -->
+          <h3>Quantity</h3>
+          <select class="form-control new-quantity">
+            <option id="quantity1" value="1">1</option>
+            <option id="quantity2" value="2">2</option>
+            <option id="quantity3" value="3">3</option>
+            <option id="quantity4" value="4">4</option>
+          </select>
+          <button type="submit" class="btn btn-info">Pizzify Me</button>
+          </form>
+        </div>
+
+        <div class="col-md-6" id="box2">
+          <div id="show-ticket">
+            <h2>Your order total for</h2>
+            <h3></h3>
+            <h4></h4>
+            <h1 id="order-total"></h1>
+            <h5></h5>
+          </div>
+        </div>
+
+      </div>
+
+      <!--START SECOND ROW-->
+      <div class="row">
+        <div class="col-md-6" id="box3">
+          <form id="new-order">
+          <!-- First dropdown (Toppings) -->
+          <h3>Select Your Toppings:</h3>
+          <select class="form-control new-topping">
+            <option id="topping1" value="1">Pepperoni (Boring) (+$1)</option>
+            <option id="topping2" value="2">Anchovies (Ew) (+$1)</option>
+            <option id="topping3" value="3">Unicorn Steak (Now We're Talking) (+$2)</option>
+            <option id="topping4" value="4">Alien Crab Meat (+$2)</option>
+            <option id="topping5" value="5">Substance X (+$3)</option>
           </select>
           <!-- Second dropdown (Time) -->
           <h3>Select Your Pizza Size:</h3>
@@ -46,7 +92,7 @@
           </form>
         </div>
         <!-- First column ends -->
-        <div class="col-md-4">
+        <div class="col-md-6" id="box4">
           <div id="show-ticket">
             <h2>Your order total for</h2>
             <h3></h3>
@@ -56,7 +102,6 @@
           </div>
         </div>
 
-      </div>
     </div>
   </body>
 </html>
