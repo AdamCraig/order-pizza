@@ -3,7 +3,16 @@
   font-weight: bolder;
 }
 
-#box1, #box2, #box3, #box4 {
-  border: solid black 10px;
-  border-radius: 4px;
+#box1, #box3 {
+  border: solid black 3px;
+  margin-bottom: 4px;
+  background-color: green;
+  margin: 2px;
+}
+
+#box2, #box4 {
+  border: solid black 3px;
+  margin-bottom: 4px;
+  background-color: gray;
+  margin: 2px;
 }

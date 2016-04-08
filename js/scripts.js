@@ -15,6 +15,28 @@ Pizza.prototype.calculateOrderCost = function() {
     orderCost += 3;
   }
 
+  if (this.pizzaSize === 1) {
+    orderCost += 1;
+  } else if (this.pizzaSize === 2) {
+    orderCost += 2;
+  } else if (this.pizzaSize === 3) {
+    orderCost += 3;
+  } else if (this.pizzaSize === 4) {
+    orderCost += 4;
+  } else {
+    orderCost += 5;
+  }
+
+  if (this.quantity === 1) {
+    orderCost *= 1;
+  } else if (this.quantity === 2) {
+    orderCost *= 3;
+  } else if (this.quantity === 3) {
+    orderCost *= 300;
+  } else {
+    orderCost *= 300000;
+  }
+
   return orderCost;
 }
 
@@ -29,7 +51,7 @@ $(document).ready(function() {
 
     var pizza = new Pizza(inputtedToppings, inputtedPizzaSize, inputtedQuantity);
 
-    $("#order-total").text("$" + pizza.calculateOrderCost() );
+    $("#order-total").text(pizza.calculateOrderCost() + " Glorps");
 
   });
 });
