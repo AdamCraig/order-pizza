@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.12.0.js"></script>
+    <script src="js/scripts.js"></script>
+    <title>Order Your Dream Pizza!</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Order Your Dream Pizza!</h1>
+      <p>$2 off</p>
+      <p>$1 off</p>
+      <p>$2 extra</p>
+      <div class="row">
+        <div class="col-md-8">
+          <form id="new-order">
+          <!-- First dropdown (Toppings) -->
+          <h3>Select Your Toppings:</h3>
+          <select class="form-control new-topping">
+            <option id="topping1" value="11">Placeholder</option>
+            <option id="topping2" value="11">Placeholder</option>
+            <option id="topping3" value="13">Placeholder</option>
+            <option id="topping4" value="11">Placeholder</option>
+            <option id="topping5" value="11">Placeholder</option>
+          </select>
+          <!-- Second dropdown (Time) -->
+          <h3>Select Your Pizza Size:</h3>
+          <select class="form-control new-size">
+            <option id="size1" value="-2">Teeny Tiny Pie (Little Bites)</option>
+            <option id="size2" value="-2">Pretty Small Paul</option>
+            <option id="size3" value="0">Mid-Size Sid</option>
+            <option id="size4" value="0">Large Marge</option>
+            <option id="size5" value="0">Super Junior</option>
+          </select>
+          <!-- Third dropdown (Age) -->
+          <h3>Quantity</h3>
+          <select class="form-control new-quantity">
+            <option id="quantity1" value="1">1</option>
+            <option id="quantity2" value="2">2</option>
+            <option id="quantity3" value="3">3</option>
+            <option id="quantity4" value="4">4</option>
+          </select>
+          <button type="submit" class="btn btn-info">Pizzify Me</button>
+          </form>
+        </div>
+        <!-- First column ends -->
+        <div class="col-md-4">
+          <div id="show-ticket">
+            <h2>Your order total for</h2>
+            <h3></h3>
+            <h4></h4>
+            <h1 id="order-total"></h1>
+            <h5></h5>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
