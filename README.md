@@ -12,7 +12,7 @@ _A webpage that accepts input from the user to customize a pizza order that will
 
 ## Setup/Installation Requirements
 
-* _Viewing the page is easily accomplished by opening the index.html file in any internet browser. _
+* _Viewing the page is easily accomplished by heading on over to its GitHub Pages link at http://adamcraig.github.io/order-pizza _
 
 ## Known Bugs
 
