@@ -1,3 +1,5 @@
+![Home Page](screenshot.png)
+
 # _Order-Pizza_
 
 #### _A webpage which outputs a pizza order according to a user's selections._
